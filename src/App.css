@@ -6,7 +6,9 @@
   width: 100vw;
   background-color: #1c1e29e0;
 }
-
+Link{
+  text-decoration: none;
+}
 .FormContainer {
   background: #282a36;
   padding: 20px;
@@ -50,6 +52,8 @@
 }
 .create-room{
   color: #4aed88;
+  cursor: pointer;
+  text-decoration: none;
 }
 .joinBtn:hover,
 .leaveBtn:hover {
@@ -88,22 +92,39 @@ footer a:hover {
   border-color: #368654;
 }
 
-.mainWrap {
+.editorpage {
   display: grid;
   grid-template-columns: 230px 1fr;
+  height: 100vh;
 }
 
-.aside {
+.left-panel {
   background: #1c1e29;
   padding: 16px;
   color: #fff;
+  display: grid;
+  position: relative;
+}
+.left-panel-inner {
   display: flex;
   flex-direction: column;
-}
-.asideInner {
-  flex: 1;
+  padding: 10px;
 }
 
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #282a36;
+  border-radius: 20px;
+  gap: 20px;
+  height: 40vh;
+}
+.left-panel-btns{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-self: center;
+}
 .clientsList {
   display: flex;
   align-items: center;
