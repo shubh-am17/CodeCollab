@@ -1,16 +1,36 @@
+
+.Nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #292e47;
+  color: white;
+  height: 7vh ;
+  position: absolute;
+  width: calc(100vw - 20px);
+  top: 0;
+  left: 0;
+  font-family: "Fira Code", monospace;
+}
+.git{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
 .homepage {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background-color: #1c1e29e0;
+  background-color: #363d5c;
 }
-Link{
-  text-decoration: none;
-}
+
 .FormContainer {
-  background: #282a36;
+  background: #292e47;
   padding: 20px;
   border-radius: 10px;
   width: 400px;
@@ -46,18 +66,18 @@ Link{
 
 .joinBtn,
 .leaveBtn {
-  background: #4aed88;
+  background: #4a93ed;
   width: 100px;
   align-self: flex-end;
 }
 .create-room{
-  color: #4aed88;
+  color: #4a93ed;
   cursor: pointer;
   text-decoration: none;
 }
 .joinBtn:hover,
 .leaveBtn:hover {
-  background: #2b824c;
+  background: #314587;
 }
 .homepage span{
   color: white;
@@ -80,16 +100,16 @@ Link{
 }
 
 .createNewBtn {
-  color: #4aed88;
+  color: #4a93ed;
   text-decoration: none;
-  border-bottom: 1px solid #4aed88;
+  border-bottom: 1px solid #4a93ed;
   transition: all 0.3s ease-in-out;
 }
 
 .createNewBtn:hover,
 footer a:hover {
-  color: #368654;
-  border-color: #368654;
+  color: #3432c7;
+  border-color: #3451b0;
 }
 
 .editorpage {
@@ -161,11 +181,4 @@ footer a:hover {
   padding-top: 20px;
 }
 
-  footer {
-    position: fixed;
-    bottom: 0;
-  }
   
-  footer a {
-    color: #4aee88;
-  }
