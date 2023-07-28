@@ -15,14 +15,12 @@ const Editor = ({ socketRef, roomId }) => {
       editorRef.current = Codemirror.fromTextArea(
         document.getElementById("realtimeEditor"),
         {
-          mode: { name: "javascript", json: true },
-          theme: "dracula",
-          autoCloseTags: true,
-          autoCloseBrackets: true,
-          lineWrapping: true,
-          scrollbarStyle: "null",
-          styleActiveLine: true,
-          matchBrackets: true,
+          mode: { name: 'javascript', json: true },
+                    theme: 'dracula',
+                    autoCloseTags: true,
+                    autoCloseBrackets: true,
+                    lineNumbers: true,
+                    tabSize:0,
         }
       );
       //CHANGES store all history of changes like undo redo
@@ -44,7 +42,7 @@ const Editor = ({ socketRef, roomId }) => {
       });
     }
     init();
-  }, [editorRef.current]);
+  }, []);
 
   useEffect(() => {
     if(!socketRef.current) return; //if socket is not connected  
@@ -53,7 +51,7 @@ const Editor = ({ socketRef, roomId }) => {
     socketRef.current.on(ACTIONS.CODE_CHANGE, ({ code }) => {
         
         editorRef.current.setValue(code);
-        
+
       });
   }, [socketRef.current]);
 

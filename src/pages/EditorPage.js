@@ -72,9 +72,9 @@ function EditorPage() {
 
     //CLEANING UP 
     return () => {
-      // socketRef.current.disconnect();
-      // socketRef.current.off(ACTIONS.JOINED);
-      // socketRef.current.off(ACTIONS.DISCONNECTED);
+      socketRef.current.disconnect();
+      socketRef.current.off(ACTIONS.JOINED);
+      socketRef.current.off(ACTIONS.DISCONNECTED);
     };
   }, []);
   //blank array means it will run only once
@@ -99,6 +99,8 @@ function EditorPage() {
     <div className="editorpage">
 
       <div className="left-panel">
+      <h1 className="logo">CodeCollab.</h1>
+
         <div className="left-panel-inner">
       <Toaster/>
           <h3>Connected</h3>
@@ -113,6 +115,7 @@ function EditorPage() {
                 </>
               );
             })}
+            {/* //TODO: display name of current user as YOU keeping same avatar */}
           </div>
         </div>
         <div className="left-panel-btns">

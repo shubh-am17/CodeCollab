@@ -1,23 +1,24 @@
-
-.Nav{
+.Nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   background-color: #292e47;
   color: white;
-  height: 7vh ;
+  height: 7vh;
   position: absolute;
   width: calc(100vw - 20px);
   top: 0;
   left: 0;
   font-family: "Fira Code", monospace;
 }
-.git{
+.git {
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 .homepage {
   position: relative;
@@ -52,8 +53,6 @@
   font-weight: bold;
 }
 
-
-
 .btn {
   border: none;
   padding: 10px;
@@ -70,7 +69,7 @@
   width: 100px;
   align-self: flex-end;
 }
-.create-room{
+.create-room {
   color: #4a93ed;
   cursor: pointer;
   text-decoration: none;
@@ -79,7 +78,7 @@
 .leaveBtn:hover {
   background: #314587;
 }
-.homepage span{
+.homepage span {
   color: white;
 }
 .mainLabel {
@@ -87,30 +86,6 @@
   margin-top: 0;
 }
 
-.homePageLogo {
-  height: 80px;
-  margin-bottom: 30px;
-}
-
-
-
-.createInfo {
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
-.createNewBtn {
-  color: #4a93ed;
-  text-decoration: none;
-  border-bottom: 1px solid #4a93ed;
-  transition: all 0.3s ease-in-out;
-}
-
-.createNewBtn:hover,
-footer a:hover {
-  color: #3432c7;
-  border-color: #3451b0;
-}
 
 .editorpage {
   display: grid;
@@ -125,24 +100,40 @@ footer a:hover {
   display: grid;
   position: relative;
 }
+.logo {
+  font-family: "Fira Code", monospace;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #292e47;
+}
 .left-panel-inner {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .user-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+  grid-auto-rows: auto;
   background-color: #282a36;
-  align-items: center;
   border-radius: 20px;
-  justify-content: center;
-  gap: 15px;
+  gap: 10px;
   min-height: 40vh;
+  max-height: 80vh;
   height: fit-content;
   padding: 8px;
+  width: 190px;
+  overflow: scroll;
 }
-.left-panel-btns{
+.user-list::-webkit-scrollbar {
+  display: none;
+}
+
+.left-panel-btns {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
@@ -161,15 +152,6 @@ footer a:hover {
   margin-top: 10px;
 }
 
-.logo {
-  border-bottom: 1px solid #424242;
-  padding-bottom: 10px;
-}
-
-.logoImage {
-  height: 60px;
-}
-
 .leaveBtn {
   width: 100%;
   margin-top: 20px;
@@ -180,5 +162,3 @@ footer a:hover {
   line-height: 1.6;
   padding-top: 20px;
 }
-
-  
