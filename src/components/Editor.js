@@ -30,7 +30,7 @@ const Editor = ({ socketRef, roomId }) => {
         const code = instance.getValue();
         console.log(code); //get the value of the editor
 
-        if (origin != "setValue") { //else it will go into infinite loop
+        if (origin !== "setValue") { //else it will go into infinite loop
           console.log("emit changes");
           socketRef.current.emit(ACTIONS.CODE_CHANGE, {
             code,
