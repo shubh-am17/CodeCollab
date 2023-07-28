@@ -4,10 +4,7 @@ const app = express();
 const path = require('path');
 const ACTIONS = require('./src/Actions');
 const port = process.env.PORT || 5000;
-const cors=require('cors');
 const { Server } = require('socket.io');
-
-app.use(cors());
 //class which handles WebSocket connections and events on the server-side.
 
 const server = http.createServer(app);
