@@ -4,8 +4,10 @@ const app = express();
 const path = require('path');
 const ACTIONS = require('./src/Actions');
 const port = process.env.PORT || 5000;
-
+const cors=require('cors');
 const { Server } = require('socket.io');
+
+app.use(cors());
 //class which handles WebSocket connections and events on the server-side.
 
 const server = http.createServer(app);
@@ -66,7 +68,6 @@ io.on('connection', (socket) => {
 
     socket.on(ACTIONS.CODE_CHANGE, ({ code, roomId }) => {  //coming from client
         const clients = getAllConnectedClients(roomId);
-        console.log(clients, code, roomId);
         clients.forEach(({ socketId }) => {
             if (socketId !== socket.id) {
                 //emit the code change event to all the clients in the room expect the one who changed the code

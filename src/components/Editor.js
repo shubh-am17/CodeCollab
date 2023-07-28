@@ -35,6 +35,7 @@ const Editor = ({ socketRef, roomId }) => {
           socketRef.current.emit(ACTIONS.CODE_CHANGE, {
             code,
             roomId,
+            
           });
         }
 
@@ -49,8 +50,10 @@ const Editor = ({ socketRef, roomId }) => {
 
     //Listen for the code change event emmited from line 72 in server.js
     socketRef.current.on(ACTIONS.CODE_CHANGE, ({ code }) => {
-        
+        const cursorPosition = editorRef.current.getCursor();
         editorRef.current.setValue(code);
+        editorRef.current.setCursor(cursorPosition);
+        
 
       });
   }, [socketRef.current]);

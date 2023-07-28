@@ -2,12 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
   background-color: #292e47;
   color: white;
-  height: 7vh;
   position: absolute;
-  width: calc(100vw - 20px);
+  width: 100%;
   top: 0;
   left: 0;
   font-family: "Fira Code", monospace;
@@ -17,8 +15,12 @@
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  padding: 10px;
   text-decoration: none;
   color: white;
+}
+.logo-home{
+  padding: 10px;
 }
 .homepage {
   position: relative;

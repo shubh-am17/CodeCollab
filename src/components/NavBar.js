@@ -3,7 +3,7 @@ import React from 'react'
 function NavBar() {
   return (
     <nav className='Nav'>
-        <h1>CodeCollab.</h1>
+        <h1 className='logo-home'>CodeCollab.</h1>
         <a href='https://github.com/shubh-am17/CodeCollab.' 
         target='_blank' className='git'>Get Source Code
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-github" viewBox="0 0 16 16">
