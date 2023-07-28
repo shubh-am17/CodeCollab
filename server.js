@@ -6,12 +6,10 @@ const ACTIONS = require('./src/Actions');
 const port = process.env.PORT || 5000;
 const { Server } = require('socket.io');
 //class which handles WebSocket connections and events on the server-side.
-
-//middleware
-app.use(express.static(path.join(__dirname, 'build')));
-app.use((req,res,next)=>{
-    res.sendFile(path.join(__dirname,'build','index.html'))
-})
+app.use(express.static('build'));
+app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 const server = http.createServer(app);
 //the same happens inside app.listen
 
