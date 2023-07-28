@@ -78,7 +78,7 @@ function EditorPage() {
       socketRef.current.off(ACTIONS.JOINED);
       socketRef.current.off(ACTIONS.DISCONNECTED);
     };
-  }, []);
+  }, [location.state?.username, roomId, reactNavigator]);
   //blank array means it will run only once
 
   if (!location.state?.username) {

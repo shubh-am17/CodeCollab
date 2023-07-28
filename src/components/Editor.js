@@ -43,7 +43,7 @@ const Editor = ({ socketRef, roomId }) => {
       });
     }
     init();
-  }, []);
+  }, [roomId, socketRef]);
 
   useEffect(() => {
     if(!socketRef.current) return; //if socket is not connected  
@@ -56,7 +56,7 @@ const Editor = ({ socketRef, roomId }) => {
         
 
       });
-  }, [socketRef.current]);
+  }, [socketRef]);
 
   return <textarea id="realtimeEditor"></textarea>;
 };
